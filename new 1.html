@@ -1,0 +1,120 @@
+<DOCTYPE html>
+<html>
+
+<head>
+<title>
+
+
+</title>
+
+<meta name="description" content="#"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="keywords" content="#"/>
+
+<style>
+*{margin:0px;padding:0px;box-sizing:border-box;}
+a{text-decoration:none;}         /*ps disable this if nescessary*/
+#logo>a>img{height:auto;width:10vw;:position:relative;
+margin-left:5px;margin-top:5px;}
+#logo{height:auto;width:auto;margin:1px;position:relative;display:block;}
+#menu>li{display:inline-block;margin-left:5px;
+position:relative;font-family:fantasy;font-size:20px;}
+#menu{margin-left:10vw;position:relative;top:-30px;}
+body{background:black;}
+#navs{height:20%;margin:auto;border:1px solid blue;border-top-color:red;border-right-color:red;}
+
+#headbuttons{position:absolute;top:-80px;right:5px;border:5px solid blue;width:0px;overflow:hidden;transition-duration:1s;}
+#headbuttons:hover{width:100px;}
+#dlbody{background:black;color:white;font-family:cursive;font-size:2vw;width:100%;}
+#dlbody2{background:black;color:white;font-family:cursive;font-size:2vw;width:100%;}
+
+.bodycontentgrid{display:grid;
+grid-template-columns:1fr 1fr;color:white;height:100%;width:100%;grid-gap:2px;}
+.bodycontentgrid>div{background-color:gray;}
+#one{grid-column:1/3;background:teal;}
+#two{grid-row:2/5;grid-column:1/3;background:orange;overflow-x:auto;
+display:grid;grid-template-columns:repeat(5,1fr);text-align:center;grid-gap:1%;padding:5px;}
+
+#two>div{border:1px solid red;padding:3px;}
+#two>div>a>img{width:95%;height:auto;}
+#two>div>a>img:hover{width:100%;height:100px;}
+
+#dmObj{position:fixed;bottom:5px;right:5%;z-index:1;
+background:transparent;height:auto;width:5%;margin:2px;}
+#dmObj>a>img{opacity:0.4;}
+#dmObj>a>img:hover{opacity:1;}
+
+</style>
+
+</head>
+<body id="body">
+<header>
+
+
+<nav id='navs'>   <!----- navigation menu   -----START------- id="navs"  ---------------------!!!!!!--->
+      <div id="logo"> <a href="https://google.com"><img src="logo2.png" alt="void website logo"/></a></div>
+	   <ul id="menu">
+          <li><a href="#">Channels</a></li>
+          <li><a href="#">Best deals</a></li>
+		 <li><a href="#">Trend list</a></li>
+          <li><a href="#">Comming Soon</a></li>
+		  
+		  <div id="headbuttons">
+		<button id="dlbody"  >Light</button>
+	   	<button id="dlbody2">Dark</button>
+	</div>
+      </nav>
+   <!----- navigation menu   -----END------- id="navs"   ---------------------!!!!!!--->
+</header>
+<div class="bodycontentgrid">
+<div id="one">1</div>
+
+<div id="two">
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct" title="its a pruduct"/></a></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
+
+</div>
+
+<div id="three">3</div>
+<div id="four">4</div>
+<div id="five">5</div>
+<div id="six">6</div>
+</div>
+
+
+<div id="dmObj" title="you want your
+ pruduct to be advertized in this page?  send us
+ a dm and lets talk about it"><a href="direct chat acces ps "><img src="TOUCHTYPE.png"></a></div>
+
+
+
+<script>
+// light and dark button test functions -------------------------start--
+ var dark = document.getElementById("dlbody");
+     dark.addEventListener("click",function(){
+ var x=document.getElementById("body");
+     x.style.backgroundColor="white"});
+ 
+ var dark = document.getElementById("dlbody2");
+     dark.addEventListener("click",function(){
+ var x=document.getElementById("body");
+     x.style.backgroundColor="black"});
+// light and dark button test functions ------------------------end----
+
+</script>
+
+
+
+
+</body>
+</html>
+
+</DOCTYPE>
