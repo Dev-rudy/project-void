@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -19,11 +19,12 @@ margin-left:5px;margin-top:5px;}
 #logo{height:auto;width:auto;margin:1px;position:relative;display:block;}
 #menu>li{display:inline-block;margin-left:5px;
 position:relative;font-family:fantasy;font-size:20px;}
-#menu{margin-left:10vw;position:relative;top:-30px;}
+#menu>li:hover{text-shadow:-1px 3px 10px violet;}
+#menu{margin-left:10vw;position:relative;top:-40px;}
 body{background:black;}
-#navs{height:20%;margin:auto;border:1px solid blue;border-top-color:red;border-right-color:red;}
+#navs{height:105px;width:100%;margin:auto;border:1px solid blue;border-top-color:red;border-right-color:red;}
 
-#headbuttons{position:absolute;top:-80px;right:5px;border:5px solid blue;width:0px;overflow:hidden;transition-duration:1s;}
+#headbuttons{position:fixed;top:10px;right:5px;border:2px solid red;width:0px;overflow:hidden;transition-duration:1s;}
 #headbuttons:hover{width:100px;}
 #dlbody{background:black;color:white;font-family:cursive;font-size:2vw;width:100%;}
 #dlbody2{background:black;color:white;font-family:cursive;font-size:2vw;width:100%;}
@@ -32,18 +33,43 @@ body{background:black;}
 grid-template-columns:1fr 1fr;color:white;height:100%;width:100%;grid-gap:2px;}
 .bodycontentgrid>div{background-color:gray;}
 #one{grid-column:1/3;background:teal;}
-#two{grid-row:2/5;grid-column:1/3;background:orange;overflow-x:auto;
-display:grid;grid-template-columns:repeat(5,1fr);text-align:center;grid-gap:1%;padding:5px;}
+#two{grid-row:2/5;grid-column:1/3;background:transparent;overflow-x:auto;
+display:grid;grid-template-columns:repeat(5,1fr);
+text-align:center;grid-gap:1%;padding:5px; }
 
-#two>div{border:1px solid red;padding:3px;}
-#two>div>a>img{width:95%;height:auto;}
-#two>div>a>img:hover{width:100%;height:100px;}
+#two>div{border:1px solid red;padding:3px;text-overflow:ellipsis;}    /*  this is the nested grid on div two*/
+#two>div>a>img{position:relative;width:50%;height:auto;transition-duration:2s;margin-bottom:0px;}                                              /**/
+#two>div>a>img:hover{width:100%;height:200px;z-index:2;display:absolute;margin-bottom:0px;} /*  this is the nested grid on div two*/
+#prodDESC{font-size:auto;color:blue;}
+#itemdesc{color:red;text-shadow:-1px 1px 5px teal;}
+#offprice{font-weight:bold;}
 
-#dmObj{position:fixed;bottom:5px;right:5%;z-index:1;
-background:transparent;height:auto;width:5%;margin:2px;}
-#dmObj>a>img{opacity:0.4;}
-#dmObj>a>img:hover{opacity:1;}
+#cta{height:auto;width:100%;displayu:;}
+#three>p{overflow:hidden;text-align:center;padding:5%;font-weight:bold;font-size:xx-large;}
+#three{background-image:url("https://as2.ftcdn.net/v2/jpg/03/53/53/89/1000_F_353538922_zB6T22cd02OSx0Z81MmKPkPZdvb0d4qT.jpg");background-size:100% auto;}
 
+#four>p{overflow:hidden;text-align:center;padding:5%;font-weight:bold;font-size:xx-large;}
+#four{background-image:url("https://images.unsplash.com/photo-1602526432604-029a709e131c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGdhZGdldHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80");background-size:100% auto; }
+
+#five>p{overflow:hidden;text-align:center;padding:5%;font-weight:bold;font-size:xx-large;}
+#five{background-image:url("https://images.pexels.com/photos/1087727/pexels-photo-1087727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");background-size:100% auto;}
+
+#six>p{overflow:hidden;text-align:center;padding:5%;font-weight:bold;font-size:xx-large;}
+#six{background-image:url("https://cdn.pixabay.com/photo/2016/11/07/04/32/interior-design-1804867_1280.jpg");background-size:100% auto;}
+
+#dmObj{position:fixed;bottom:5px;right:5%;z-index:1;     /*  this is the invisible button on bottom right*/
+background:transparent;height:auto;width:5%;margin:2px;}                                               /**/
+#dmObj>a>img{opacity:0.4;}                                                                             /**/
+#dmObj>a>img:hover{opacity:1;}                           /*  this is the invisible button on bottom right*/
+
+
+#section{height:900px;width:100%;background:transparent;padding:1px;text-align:center;font-weight:bold;font-size:xx-large;margin:1px;}
+#card{display:inline-block;height:30%;width:20%;
+position:relative;margin:15px;border:1px solid red;margin-top:40px;transition-duration:2s;}
+#card:hover{width:25%;height:35%;box-shadow:1px 5px 50px purple;}
+#nettie{color:white;}
+#netflix{color:red; }
+#netflix:hover{text-shadow:1px -1px  5px red;}
 </style>
 
 </head>
@@ -57,7 +83,7 @@ background:transparent;height:auto;width:5%;margin:2px;}
           <li><a href="#">Channels</a></li>
           <li><a href="#">Best deals</a></li>
 		 <li><a href="#">Trend list</a></li>
-          <li><a href="#">Comming Soon</a></li>
+          <li><a href="#" onclick="alert('more contents comming soon')">Comming Soon</a></li>
 		  
 		  <div id="headbuttons">
 		<button id="dlbody"  >Light</button>
@@ -67,34 +93,48 @@ background:transparent;height:auto;width:5%;margin:2px;}
    <!----- navigation menu   -----END------- id="navs"   ---------------------!!!!!!--->
 </header>
 <div class="bodycontentgrid">
-<div id="one">1</div>
+<div id="one">1 placeholder for marquee animation</div>
 
 <div id="two">
-<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct" title="its a pruduct"/></a></div> 
-<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
-<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
-<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
-<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
-<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
-<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
-<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
-<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
-<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a></div> 
-
+<div title="its a pruduct"><a href="#"><img src="https://media.istockphoto.com/id/491520707/photo/sample-red-grunge-round-stamp-on-white-background.jpg?s=1024x1024&w=is&k=20&c=HZ3aN-WLxmMBwTh5mGYFVXYn84xPGw-Pj0gVKwb4BOE=" alt="affeliate pruduct"/></a><p id="prodDESC"><span id="itemdesc">pruduct desc<strike id="offprice">₱xx</strike></span><br>abc123ff<br>ffffffff
+fffffff<br>fffffffffffffffffffffff</p> </div>
+ 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a><p id="prodDESC"><span id="itemdesc">pruduct desc<strike id="offprice">₱xx</strike> </span><br>abc123</p></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a><p id="prodDESC"><span id="itemdesc">pruduct desc<strike id="offprice">₱xx</strike></span><br>abc123</p></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a><p id="prodDESC"><span id="itemdesc">pruduct desc<strike id="offprice">₱xx</strike></span><br>abc123</p></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a><p id="prodDESC"><span id="itemdesc">pruduct desc<strike id="offprice">₱xx</strike></span><br>abc123</p></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a><p id="prodDESC"><span id="itemdesc">pruduct desc<strike id="offprice">₱xx</strike></span><br>abc123</p></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a><p id="prodDESC"><span id="itemdesc">pruduct desc<strike id="offprice">₱xx</strike></span><br>abc123</p></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a><p id="prodDESC"><span id="itemdesc">pruduct desc<strike id="offprice">₱xx</strike></span><br>abc123</p></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a><p id="prodDESC"><span id="itemdesc">pruduct desc<strike id="offprice">₱xx</strike></span><br>abc123</p></div> 
+<div title="its a pruduct"><a href="#"><img src="#" alt="affeliate pruduct"/></a><p id="prodDESC"><span id="itemdesc">pruduct desc<strike id="offprice">₱xx</strike></span><br>abc123</p></div> 
 </div>
 
-<div id="three">3</div>
-<div id="four">4</div>
-<div id="five">5</div>
-<div id="six">6</div>
+<div id="three"><p>90 to 100 peso Deals </p></div>
+<div id="four"><p>Gadgets </p></div>
+<div id="five"><p>Trend items </p></div>
+<div id="six"><p>Home Hacks </p></div>
 </div>
 
 
 <div id="dmObj" title="you want your
  pruduct to be advertized in this page?  send us
  a dm and lets talk about it"><a href="direct chat acces ps "><img src="TOUCHTYPE.png"></a></div>
+<section>
+<div id='section'>
+<h3 id="nettie">Recomended from<span id="netflix" title="want to Visit Netflix?">&nbsp <a href="#" style="color:red;"> Netflix</a></span></h3>
+<div id="card"><img src="" alt=""/><p>yo</p></div>
+<div id="card"><img src="" alt=""/><p>lo</p></div>
+<div id="card"><img src="" alt=""/><p>yo</p></div>
+<div id="card"><img src="" alt=""/><p>lo</p></div>
+<div id="card"><img src="" alt=""/><p>lo</p></div>
+<div id="card"><img src="" alt=""/><p>lo</p></div>
+<div id="card"><img src="" alt=""/><p>yo</p></div>
+<div id="card"><img src="" alt=""/><p>lo</p></div>
 
 
+</div>
+</section>
 
 <script>
 // light and dark button test functions -------------------------start--
@@ -116,5 +156,3 @@ background:transparent;height:auto;width:5%;margin:2px;}
 
 </body>
 </html>
-
-</DOCTYPE>
