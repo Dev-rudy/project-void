@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>
+
+
+</title>
+
+<meta name="description" content="#"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="keywords" content="#"/>
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lobster+Two:wght@700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+<!---font-family: 'Amatic SC', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'VT323', monospace;--->
+
+
+
+
+<style>
+*{margin:0px;padding:0px;box-sizing:border-box;box-sizing:border-box;}
+a{text-decoration:none;color:white;}         /*ps disable this if nescessary*/
+#logo>a>img{height:100%;width:100%;:position:relative;
+margin-left:5px;margin:auto;}
+#logo{;margin:3px;position:relative;
+display:block;grid-row:1/1;;height:130px;border:1px solid transparent;}
+#menu{margin-left:10vw;position:relative;margin:5px;text-align:center ;}
+#menu>li{display:inline-block;font-size:1.5rem;
+position:relative;font-family: 'VT323', monospace;;;margin:5px;color:lightblue;}
+#menu>li:hover{text-shadow:-1px 5px 4px  fuchsia;}
+#menu>li>a{color:blue;}
+body{/*background-image:url("");*/background:black;}
+
+
+
+
+
+#navs{display:grid;height:105px;width:100%;margin:auto;border:1px solid transparent;
+;border-bottom-color:transparent;
+box-shadow:1px 1px 15px 10px fuchsia;grid-template-columns:1fr 1fr 1fr ;border-radius:0 0 20px 20px;}
+
+#navmarq{grid-row:1/4;border:2px solid transparent;width:200%;;
+padding-bottom:10%;box-sizing:border-box;color:white;font-size:large;font-weight:bold;
+font-family:times  new  roman ;overflow-x:hidden;}
+
+
+@keyframes marquee {
+
+0%{color:blue;box-shadow:1px  1px  5px  5px blue;}
+25%{color:red;box-shadow:1px  1px  5px  5px red;}
+50%{color:green;box-shadow:1px  1px  5px  5px green;}
+75%{color:purple; box-shadow:1px  1px  5px  5px purple;}
+100%{color:white;box-shadow:1px  1px  5px  5px fuchsia;}
+}
+
+
+#marquee{border:1px solid transpparent;height:3px;width:57%;
+animation-name:marquee;
+animation-duration:6s;
+position:absolute;
+animation-timing-function:ease-in-out;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+text-align:center;margin:0px;text-align:left;overflow:auto;
+}
+#marquee:hover{;height:10%;}
+
+
+
+
+.bodycontentgrid{display:grid;
+grid-template-columns:1fr 1fr;color:white;height:100%;width:100%;grid-gap:2px;}
+.bodycontentgrid>div{background-color:gray;}
+#one{grid-column:1/3;background:transparent;height:300px;}
+
+
+#dmObj{position:fixed;bottom:5px;right:5%;z-index:1;     /*  this is the invisible button on bottom right*/
+background:transparent;height:auto;width:5%;margin:2px;}                                               /**/
+#dmObj>a>img{opacity:0.4;}                                                                             /**/
+#dmObj>a>img:hover{opacity:1;}                           /*  this is the invisible button on bottom right*/
+
+
+
+
+
+
+
+@keyframes daily {
+
+0%{color:blue;box-shadow:1px  1px  5px  5px blue;}
+25%{color:red;box-shadow:1px  1px  5px  5px red;}
+50%{color:green;box-shadow:1px  1px  5px  5px green;}
+75%{color:purple; box-shadow:1px  1px  5px  5px purple;}
+100%{color:white;box-shadow:1px  1px  5px  5px fuchsia;}
+}
+
+#embed{border:2px  solid  transparent;height:250px;width:100%;}
+/*#frame{height:300%;width:100%;margin:0px;align:center;}*/
+
+#topOffer{font-family: 'Press Start 2P', cursive ;text-align:center;animation-name:daily;animation-duration:6s;
+position:relative;
+animation-timing-function:ease-in-out;
+animation-iteration-count:infinite;
+animation-direction:alternate;}
+
+#itemCont{border:2px dotted red;display:grid; grid-template-columns:1fr 1fr ;height:300px;overflow-y:scroll;width:100%;}
+#items{border:1px solid blue;height:80px;}
+.Iimg{}
+
+</style>
+
+</head>
+<body id="body">
+<header>
+
+
+<div id='navs'>   <!----- navigation menu   -----START------- id="navs"  ---------------------!!!!!!--->
+      <div id="logo"> <a href="#hulu"><img id="logoimg"src="logo2.png" alt="void website logo"/></a></div>
+
+		<div id="navmarq" ><div id="marquee"><p>what a nice day isnt it? :). do you have any interest with our offers ? we make sure that our adverticements  doesnt direct you to  sketchy sites that has  a lot of pop up  ads,unlike any other sites that you know .we  only direct  you  straight to the advertisers  official sites and nothing more.  <br/> we hope  that u get  what u came for  here  at VOID. have a good day alright  :) </p></div></div>
+</div>
+   <!----- navigation menu   -----END------- id="navs"   ---------------------!!!!!!--->
+</header>
+<div class="bodycontentgrid">
+
+<div id="one">	
+
+<nav>
+   <ul id="menu">
+          <li id="options"><a href="#">Gadgets</a></li>
+          <li id="options"><a href="#two">Trend Items</a></li>
+		 <li id="options"><a href="#">Home Hacks</a></li>
+          <li id="options"><a href="#" onclick="alert('more contents comming soon')">Comming Soon</a></li>
+		  </ul>
+</nav>	
+	 <section>
+	  <div id="embed">
+	  <h3 id="topOffer">90 to ₱100 Deals🦄</h3>
+	  
+	  
+	  
+	<div id="itemCont"> 
+	
+	 <div id="items" class="Iimg">img</div>
+	<div id="items">dsc</div>
+      <div id="items"class="Iimg">img</div>
+	<div id="items">dsc</div>
+      <div id="items"class="Iimg">img</div>
+	<div id="items">dsc</div>
+     <div id="items"class="Iimg">img</div>
+	<div id="items">dsc</div>
+   <div id="items"class="Iimg">img</div>
+	<div id="items">dsc</div>
+	<div id="items"class="Iimg">img</div>
+	<div id="items">dsc</div>
+	<div id="items"class="Iimg">img</div>
+	<div id="items">dsc</div>
+	<div id="items"class="Iimg">img</div>
+	<div id="items">dsc</div>
+	<div id="items"class="Iimg">img</div>
+	<div id="items">dsc</div>
+	<div id="items"class="Iimg">img</div>
+	<div id="items">dsc</div>
+	
+	</div> 
+	
+	
+	  </div>
+	 </section> 
+ </div>
+
+
+</div>
+
+
+
+<div id="dmObj" title="you want your
+ pruduct to be advertized in this page?  send us
+ a dm and lets talk about it"><a href="direct chat acces ps "><img src="TOUCHTYPE.png"></a></div>s
+
+
+
+
+
+<footer>
+
+</footer>
+<script>
+// light and dark button test functions -------------------------start--
+ /*var dark = document.getElementById("dlbody");
+     dark.addEventListener("click",function(){
+ var x=document.getElementById("body");
+     x.style.backgroundColor="white"});
+ 
+ var dark = document.getElementById("dlbody2");
+     dark.addEventListener("click",function(){
+ var x=document.getElementById("body");
+     x.style.backgroundColor="black"});
+// light and dark button test functions ------------------------end----
+*/
+
+
+
+ let y=window.innerWidth
+  /*ps  understand  that i stoped  using css media query becauese  it gives 
+  me much of a headache 
+   instead i used  windows.innerWidth and  conditional statement(if)
+   to make elements  responsive  such
+    as those  images  and  some  texts....and i figured that it works  in most devices  
+     given as example  on chrome  devtool(inspect)	it feels right though becaue i know 
+	 javascript more than i know  css   dang i hated  css  just a bit ...
+	 i cant help myself but rely on my js  knowledge  and ofcourse with the help of
+	 google  and stuff because i am forgetful of syntaxes*/
+	 /*and oh ps  identify text manipulatins during breakpoints  because we are not done  yet*/
+ if(y===1440,1441, 1442,1439){ document.getElementById("logoimg").style.width="45%"}
+  /* if(y===1440, 1442,1439,1441){ let options=document.querySelector("#menu>li")
+   for(var  x=0;x<options.length;x++){options[x].style.fontSize="2.1rem"}}*/
+ if(y===1200,1202){document.getElementById("logoimg").style.width="50%"}//1199
+  if(y===834,835){document.getElementById("logoimg").style.width="60%"}//832
+  if(y===477,478,479){document.getElementById("logoimg").style.width="auto"} 
+  if(y===375,376,377){document.getElementById("embed").style.height="220%",
+                       document.getElementById("one").style.height="230px",
+					  document.getElementById("dmObj").style.right="5%"}
+if(y===1020,1021,1202){document.getElementById("one").style.height="320%"}
+   if(y===360,361){document.getElementById("menu").style.marginLeft="2vw"}
+
+console.log(y);
+</script>
+
+
+
+
+</body>
+</html>
+<!--this is the subpage  pls  leav only  the menu bar and  the navigation  leaving empty  bottom or  body  part----->  
